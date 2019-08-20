@@ -66,8 +66,9 @@ Software required:
    $ /data/new-pipeline/nsci-sort-samtobam.sh > $SCWORKING/logs/sam2bam.stdout.txt 2> $SCWORKING/logs/sam2bam.stderr.txt &
 ```
 7) Count the reads from all bam files, save RData file
-
-Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/3A  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges3A.RData meninges3A
-Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/3P  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges3P.RData meninges3P
-Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/18A  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges18A.RData meninges18A
-Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/18P  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges18P.RData meninges18P
+```
+   $ Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/3A  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges3A.RData meninges3A
+   $ Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/3P  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges3P.RData meninges3P
+   $ Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/18A  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges18A.RData meninges18A
+   $ Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/18P  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges18P.RData meninges18P
+```
