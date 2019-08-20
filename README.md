@@ -13,8 +13,8 @@ Software required:
    
    
 1) Convert new bcl files to fastq
-   > mkdir ./Data/fastq . (whereever you want it)
-   > cd (directory of unpacked data from illumina)
+   * `mkdir ./Data/fastq .` (whereever you want it)
+   * ` cd (directory of unpacked data from illumina)`
    > ulimit -n 4000   ## sets the limit on number of open files
    NOTE: Add bcl2fastq to path 
    > $ PATH=$PATH:/usr/local/bcl2fastq2-v2.19.1/bin; export PATH
