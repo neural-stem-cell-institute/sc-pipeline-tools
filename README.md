@@ -13,16 +13,17 @@ Software required:
    
    
 1) Convert new bcl files to fastq
-   * `mkdir ./Data/fastq .` (whereever you want it)
-   * ` cd (directory of unpacked data from illumina)`
-   > ulimit -n 4000   ## sets the limit on number of open files
+```  
+   $ mkdir ./Data/fastq . (whereever you want it)
+   $ cd (directory of unpacked data from illumina)`
+   $ ulimit -n 4000   ## sets the limit on number of open files
    NOTE: Add bcl2fastq to path 
-   > $ PATH=$PATH:/usr/local/bcl2fastq2-v2.19.1/bin; export PATH
-   >bcl2fastq --minimum-trimmed-read-length 21 --mask-short-adapter-reads 0 --input-dir ./Data/Intensities/BaseCalls --outputdir ./Data/fastq &> bcl2fastq.out.txt &
+   $ PATH=$PATH:/usr/local/bcl2fastq2-v2.19.1/bin; export PATH
+   $ bcl2fastq --minimum-trimmed-read-length 21 --mask-short-adapter-reads 0 --input-dir ./Data/Intensities/BaseCalls --outputdir ./Data/fastq &> bcl2fastq.out.txt &
 
    NOTE: For full length, the sample sheet must be included
-   > /usr/local/bcl2fastq-v2.19.1/bin/bcl2fastq --mask-short-adapter-reads 0 --input-dir ./Data/Intensities/BaseCalls --outputdir ./Data/fastq --sample-sheet ./Data/SampleSheet-meninges.csv
-   
+   $ /usr/local/bcl2fastq-v2.19.1/bin/bcl2fastq --mask-short-adapter-reads 0 --input-dir ./Data/Intensities/BaseCalls --outputdir ./Data/fastq --sample-sheet ./Data/SampleSheet-meninges.csv
+``` 
 2) Merge the fastq files for Read 1 and Read 2
    > cat *R1* output-file-name-etc_R1.fastq.gz
    > cat *R2* output-file-name-etc_R1.fastq.gz
