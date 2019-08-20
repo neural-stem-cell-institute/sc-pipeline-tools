@@ -36,7 +36,7 @@ Software required:
                       output directory (with trailing slash)
                       metadata file (to doublecheck barcode sequences)Split combined fastq on barcodes
                       
-   > cd /data/new-pipeline/java
+   `<addr>` cd /data/new-pipeline/java
    > export SCWORKING=/data/project/processing/fastq/directory
    > java singlecell.PreprocessWafergenFastq $SCWORKING/aug2018-meninges-etc_R1.fastq.gz $SCWORKING/aug2018-meninges-etc_R2.fastq.gz $SCWORKING/output/ $SCWORKING/105152.metadata > $SCWORKING/logs/105152-stdout.txt 2> $SCWORKING/logs/105152-stderr.txt &
 
