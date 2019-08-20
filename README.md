@@ -13,6 +13,8 @@ Software required:
    5) nsci-align.sh (shell script)
    6) nsci-sort-samtobam.sh (shell script)
    7) load_and_count_reads_from_bams.R (R)
+   8) Star mapping software
+   9) Samtools
    
    
 The Process   
