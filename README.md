@@ -6,13 +6,13 @@ Information/Data/Input required:
    2) Well list file from ICell8 machine
    
 Software required:
-   1) Bcl2fastq utility from Illumina
-   2) makeMetaFromWellList.R script  (R)
-   3) singlecell.PreprocessWafergenFastq (java)
-   4) singlecell.GroupFiles (java)
-   5) nsci-align.sh (shell script)
-   6) nsci-sort-samtobam.sh (shell script)
-   7) load_and_count_reads_from_bams.R (R)
+   1 Bcl2fastq utility from Illumina
+   1 makeMetaFromWellList.R script  (R)
+   1 singlecell.PreprocessWafergenFastq (java)
+   1 singlecell.GroupFiles (java)
+   1 nsci-align.sh (shell script)
+   1 nsci-sort-samtobam.sh (shell script)
+   1 load_and_count_reads_from_bams.R (R)
    
    
    
