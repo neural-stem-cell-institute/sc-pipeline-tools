@@ -59,8 +59,10 @@ do
 	do
   		echo "Aligning $f with STAR aligner ..."
   		SHORT=$(basename "$f")
-		/opt/STAR/bin/Linux_x86_64/STAR --genomeDir $GENOMEDIR --runThreadN $NTHREADS --readFilesIn $f --outFileNamePrefix $CHIPID_"${SHORT%.*}" 
+		/opt/STAR/bin/Linux_x86_64/STAR --genomeLoad LoadAndKeep --genomeDir $GENOMEDIR --runThreadN $NTHREADS --readFilesIn $f --outFileNamePrefix $CHIPID_"${SHORT%.*}" 
 		#  /opt/STAR/bin/Linux_x86_64/STAR --genomeDir /data/genomes/STAR/mm10/ --runThreadN 30 --readFilesIn $f --outFileNamePrefix $CHIPID_"${SHORT%.*}" 
 	
 	done
 done
+
+/opt/STAR/bin/Linux_x86_64/STAR --genomeLoad LoadAndExit
