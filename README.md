@@ -57,12 +57,12 @@ The Process
     * The directory to process (without trailing slash)
     * metadata file
 ```
-   $ java singlecell.GroupFiles /data/aug2017-sci/day3/processing /data/aug2017-sci/wafergen/89500-day-03-SCI/89500.metadata > /data/aug2017-sci/day3/processing/group-stdout.txt 2> /data/aug2017-sci/day3/processing/group-stderr.txt &
+   $ java singlecell.GroupFiles $SCWORKING/output $SCWORKING/89500.metadata > $SCWORKING/logs/group-stdout.txt 2> $SCWORKING/logs/group-stderr.txt &
 ```
 5) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) <mapping started 10/02/2018@16:26>
 ```
    $ export SCWORKING=/data/aug2018-meninges/processing/fl-take2
-   $ /data/new-pipeline/nsci-align.sh $SCWORKING 106711 18A 18P 3A 3P > $SCWORKING/logs/nsci-align.stdout.txt 2> $SCWORKING/logs/nsci-align.stderr.txt
+   $ /data/new-pipeline/nsci-align.sh $SCWORKING/output 106711 18A 18P 3A 3P > $SCWORKING/logs/nsci-align.stdout.txt 2> $SCWORKING/logs/nsci-align.stderr.txt
 ```
 6) Convert sam file to bam files for import into R
 ```
