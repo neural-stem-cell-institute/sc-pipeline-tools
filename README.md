@@ -34,7 +34,7 @@ The Process
 2) Merge the fastq files for Read 1 and Read 2
 ```
    $ cat *R1* > output-file-name-etc_R1.fastq.gz
-   $ cat *R2* > output-file-name-etc_R1.fastq.gz
+   $ cat *R2* > output-file-name-etc_R2.fastq.gz
 ```
 3) Create the metadata file from well list file
 ```
