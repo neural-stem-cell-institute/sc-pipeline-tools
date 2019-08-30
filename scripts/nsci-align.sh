@@ -65,4 +65,4 @@ do
 	done
 done
 
-/opt/STAR/bin/Linux_x86_64/STAR --genomeLoad LoadAndExit
+/opt/STAR/bin/Linux_x86_64/STAR --genomeLoad Remove
