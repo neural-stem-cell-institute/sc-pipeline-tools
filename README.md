@@ -41,10 +41,10 @@ The Process
    $ Rscript --vanilla /data/new-pipeline/makeMetaFromWellList.R 105152-meninges-and-others_WellList.TXT 105152.metadata
 ```
 4)  Split fastq files based on barcode. PreprocessWafergenFastq takes four arguments:
-                      R1, the tag sequence fastq file
-                      R2, the sequncing fastq
-                      output directory (with trailing slash)
-                      metadata file (to doublecheck barcode sequences)Split combined fastq on barcodes
+                     * R1, the tag sequence fastq file
+                     * R2, the sequncing fastq
+                     * output directory (with trailing slash)
+                     * metadata file (to doublecheck barcode sequences)Split combined fastq on barcodes
     Note: while processing a recent (8/2019) run, this took an hour and 20 minutes.
 ```
    $ cd /data/new-pipeline/java
