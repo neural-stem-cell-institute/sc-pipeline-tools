@@ -59,7 +59,8 @@ The Process
 ```
    $ java singlecell.GroupFiles $SCWORKING/output $SCWORKING/89500.metadata > $SCWORKING/logs/group-stdout.txt 2> $SCWORKING/logs/group-stderr.txt &
 ```
-5) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) <mapping started 10/02/2018@16:26>
+5) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) 
+**WARNING: THIS SCRIPT CURRENTLY DEFAULTS TO MOUSE GENOME! **
 ```
    $ export SCWORKING=/data/aug2018-meninges/processing/fl-take2
    $ /data/new-pipeline/nsci-align.sh $SCWORKING/output 106711 18A 18P 3A 3P > $SCWORKING/logs/nsci-align.stdout.txt 2> $SCWORKING/logs/nsci-align.stderr.txt
