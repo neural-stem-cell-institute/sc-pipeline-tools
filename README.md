@@ -41,26 +41,29 @@ The Process
    $ Rscript --vanilla /data/new-pipeline/makeMetaFromWellList.R 105152-meninges-and-others_WellList.TXT 105152.metadata
 ```
 4)  Split fastq files based on barcode. PreprocessWafergenFastq takes four arguments:
-                      R1, the tag sequence fastq file
-                      R2, the sequncing fastq
-                      output directory (with trailing slash)
-                      metadata file (to doublecheck barcode sequences)Split combined fastq on barcodes
-                      
+      * R1, the tag sequence fastq file
+      * R2, the sequncing fastq
+      * output directory (with trailing slash)
+      * metadata file (to doublecheck barcode sequences)Split combined fastq on barcodes
+    
 ```
    $ cd /data/new-pipeline/java
    $ export SCWORKING=/data/project/processing/fastq/directory
    $ java singlecell.PreprocessWafergenFastq $SCWORKING/aug2018-meninges-etc_R1.fastq.gz $SCWORKING/aug2018-meninges-etc_R2.fastq.gz $SCWORKING/output/ $SCWORKING/105152.metadata > $SCWORKING/logs/105152-stdout.txt 2> $SCWORKING/logs/105152-stderr.txt &
 ```
+      Note: while processing a recent (8/2019) run, PreprocessWafergenFastq took an hour and 20 minutes.
+
 5) Rename fastq files to associate wells with an experimental condition or sample.  GroupFiles takes two arguments:
     * The directory to process (without trailing slash)
     * metadata file
 ```
-   $ java singlecell.GroupFiles /data/aug2017-sci/day3/processing /data/aug2017-sci/wafergen/89500-day-03-SCI/89500.metadata > /data/aug2017-sci/day3/processing/group-stdout.txt 2> /data/aug2017-sci/day3/processing/group-stderr.txt &
+   $ java singlecell.GroupFiles $SCWORKING/output $SCWORKING/89500.metadata > $SCWORKING/logs/group-stdout.txt 2> $SCWORKING/logs/group-stderr.txt &
 ```
-5) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) <mapping started 10/02/2018@16:26>
+5) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) 
+**WARNING: THIS SCRIPT CURRENTLY DEFAULTS TO MOUSE GENOME! **
 ```
    $ export SCWORKING=/data/aug2018-meninges/processing/fl-take2
-   $ /data/new-pipeline/nsci-align.sh $SCWORKING 106711 18A 18P 3A 3P > $SCWORKING/logs/nsci-align.stdout.txt 2> $SCWORKING/logs/nsci-align.stderr.txt
+   $ /data/new-pipeline/nsci-align.sh $SCWORKING/output 106711 18A 18P 3A 3P > $SCWORKING/logs/nsci-align.stdout.txt 2> $SCWORKING/logs/nsci-align.stderr.txt
 ```
 6) Convert sam file to bam files for import into R
 ```
