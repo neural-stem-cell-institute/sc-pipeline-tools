@@ -45,7 +45,7 @@ The Process
                       R2, the sequncing fastq
                       output directory (with trailing slash)
                       metadata file (to doublecheck barcode sequences)Split combined fastq on barcodes
-                      
+    Note: while processing a recent (8/2019) run, this took an hour and 20 minutes.
 ```
    $ cd /data/new-pipeline/java
    $ export SCWORKING=/data/project/processing/fastq/directory
