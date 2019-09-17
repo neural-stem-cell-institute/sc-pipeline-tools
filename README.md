@@ -59,19 +59,19 @@ The Process
 ```
    $ java singlecell.GroupFiles $SCWORKING/output $SCWORKING/89500.metadata > $SCWORKING/logs/group-stdout.txt 2> $SCWORKING/logs/group-stderr.txt &
 ```
-5) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) 
+6) Map files with nsci-align-paired.sh script (script updated to handle prefixes to identify a subset of files to process, also updated from nsci-align.sh to handle paired sequencing see attached) 
 **WARNING: THIS SCRIPT CURRENTLY DEFAULTS TO HUMAN GENOME! ** 
 I'll have to update this so it is passed in as an argument
 ```
    $ export SCWORKING=/data/aug2018-meninges/processing/fl-take2
    $ /data/new-pipeline/nsci-align.sh $SCWORKING/output 106711 18A 18P 3A 3P > $SCWORKING/logs/nsci-align.stdout.txt 2> $SCWORKING/logs/nsci-align.stderr.txt
 ```
-6) Convert sam file to bam files for import into R
+7) Convert sam file to bam files for import into R
 ```
    $ cd $SCWORKING/output
    $ /data/new-pipeline/nsci-sort-samtobam.sh > $SCWORKING/logs/sam2bam.stdout.txt 2> $SCWORKING/logs/sam2bam.stderr.txt &
 ```
-7) Count the reads from all bam files, save RData file
+8) Count the reads from all bam files, save RData file
 ```
    $ Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/3A  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges3A.RData meninges3A
    $ Rscript load_and_count_reads_from_bams.R /data/aug2018-meninges/processing/fl-take2/output/3P  /data/genomes/wafergen/Mus_musculus.GRCm38.75.gtf /data/aug2018-meninges/processing/fl-take2/meninges3P.RData meninges3P
