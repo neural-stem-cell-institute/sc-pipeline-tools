@@ -1,5 +1,5 @@
 # sc-pipeline-tools
-Our internal single cell pipeline
+Externally shared version of our single cell pipeline
 
 Information/Data/Input required:
    1) Raw Illumina read data (BCL Files)
