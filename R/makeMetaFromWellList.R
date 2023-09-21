@@ -15,9 +15,6 @@
 ## Read in file from filename on command line
 args = commandArgs(trailingOnly = TRUE) ## get only the arguments
 
-# This line for testing in RSTUDIO
-#args <- c("/Users/kiehlt/Downloads/chip_89547_WellList.TXT", "/Users/kiehlt/Downloads/newmetadata.txt")
-
 ## Read in the input
 ## TODO: make sure file exists
 welllist <- read.table(args[1], sep='\t', header=TRUE)
