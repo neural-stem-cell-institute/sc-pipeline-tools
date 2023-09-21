@@ -1,4 +1,4 @@
-# sc-pipeline
+# sc-pipeline-tools
 Our internal single cell pipeline
 
 Information/Data/Input required:
